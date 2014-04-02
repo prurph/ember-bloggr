@@ -14,11 +14,33 @@
         <a class="brand" href="#">Bloggr</a>
         <ul class="nav">
           <li>{{#link-to "posts"}}Posts{{/link-to}}</li>
-          <li>{{#link-to 'about'}}About{{/link-to}}</li>
+          <li>{{#link-to "about"}}About{{/link-to}}</li>
         </ul>
       </div>
     </div>
     {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" id="posts">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <table class="table">
+            <thead>
+              <tr><th>Recent Posts</th></tr>
+            </thead>
+            {{#each}}
+            <tr><td>
+              {{title}} <small class="muted">by {{author.name}}</small>
+            </td></tr>
+            {{/each}}
+          </table>
+        </div>
+        <div class="span9">
+          {{outlet}}
+        </div>
+      </div>
+    </div>
   </script>
 
   <!-- id is name of template, lines up with URL (from Router.map) -->
