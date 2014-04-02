@@ -54,16 +54,16 @@
     {{/if}}
 
     <h1>{{title}}</h1>
-    <h2>by {{author.name}} <small class="muted">({{date}})</small></h2>
+    <h2>by {{author.name}} <small class="muted">({{format-date date}})</small></h2>
 
     <hr>
 
     <div class="intro">
-      {{excerpt}}
+      {{format-markdown excerpt}}
     </div>
 
     <div class="below-the-fold">
-      {{body}}
+      {{format-markdown body}}
     </div>
   </script>
 
