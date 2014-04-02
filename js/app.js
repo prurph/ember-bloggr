@@ -5,6 +5,7 @@ App = Ember.Application.create(); // Ember application instance
 App.Router.map(function() {
   this.resource("about");
   this.resource("posts");
+  this.resource("post", { path: ":post_id"}); // specify how post_id goes into URL
 });
 
 // route specifies which model a template should be backed by
