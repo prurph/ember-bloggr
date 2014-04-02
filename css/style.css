@@ -2,3 +2,8 @@
 .ember-application {
     margin: 20px;
 }
+
+/* Links using link to helper get .active added when they are active */
+.active {
+  font-weight: bold;
+}
